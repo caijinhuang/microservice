@@ -1,0 +1,21 @@
+server:
+  port: 8099
+spring:
+  application:
+    name: config-center
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://peer1:8088/eureka/

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: auth-server
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        #配置中心-服务id
+        service-id: CONFIG-CENTER
+        enabled: true
+      # 配置中心-配置前缀
+      name: auth
+      # 配置中心-配置后缀
+  profiles:
+    active: dev
+server:
+  port: 8089
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8088/eureka/
+
+test:
+  randomNum: ${random.value}

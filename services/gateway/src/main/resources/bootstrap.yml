@@ -27,11 +27,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8088/eureka/
-zuul:
-  routes:
-    api-a:
-      path: /auth/**
-      serviceId: auth-server
-    api-b:
-      path: /gatewayhh/**
-      url: forward:/gateway

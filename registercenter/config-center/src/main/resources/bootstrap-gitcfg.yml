@@ -11,7 +11,8 @@ spring:
         git:
           uri: https://github.com/caijinhuang/config-center
           search-paths: /config
-          basedir: registercenter/config-center/src/main/resources/gitCofig
+          # 本地缓存目录
+          basedir: gitCofig
 
 
 eureka:
